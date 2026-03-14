@@ -11,7 +11,7 @@ class AdminApp:
 
         self.root = customtkinter.CTk()
         self.root.title("Sistema Administrativo")
-        self.root.geometry("600x600")
+        self.root.geometry("600x700")
         self.db = ClientDB()
         self.calc = Calculator()
         self.setup_ui()
@@ -36,7 +36,7 @@ class AdminApp:
         boton = customtkinter.CTkButton(frame,text="Registrar Cliente",command=self.add_client)
         boton.pack(pady=10)
         self.scroll = customtkinter.CTkScrollableFrame(self.root, height=200)
-        self.scroll.pack(padx=20, pady=10, fill="both", expand=True)
+        self.scroll.pack(padx=20, pady=10, fill="both", expand=False)
 
         titulo2 = customtkinter.CTkLabel(self.root,text="CALCULADORA ADMINISTRATIVA",font=("Arial", 20, "bold"))
         titulo2.pack(pady=10)
